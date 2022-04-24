@@ -1,0 +1,40 @@
+{
+  "name": "jest-tdd",
+  "version": "1.0.0",
+  "description": "Jest Test-Driven Development project.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js --ignore __tests__",
+    "pretest": "NODE_ENV=test sequelize db:migrate",
+    "test": "NODE_ENV=test jest",
+    "posttest": "NODE_ENV=test sequelize db:migrate:undo:all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GustavoKimura/jest-tdd.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GustavoKimura/jest-tdd/issues"
+  },
+  "homepage": "https://github.com/GustavoKimura/jest-tdd#readme",
+  "dependencies": {
+    "@faker-js/faker": "^6.2.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "factory-girl": "^5.0.4",
+    "faker": "^6.6.6",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.19.0",
+    "sequelize-cli": "^6.4.1"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "sqlite3": "^5.0.5",
+    "supertest": "^6.2.2"
+  }
+}
